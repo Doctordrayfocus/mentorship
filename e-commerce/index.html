@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>E-commerce website</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="index.css">
+	</head>
+	<body class="py-4 px-3">
+		<!--[if lt IE 7]>
+			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+
+		<h1>Men's Clothes</h1>
+
+		<p id="test-para"></p>
+
+		<div id="app" class="px-2 py-2">
+			<div v-for="(product, index) in products" :key="index">
+			 <div v-bind:style="`height: 300px; background: grey; background-image:url(${product.images[1]}); background-size: cover;`">
+				
+			</div>
+			<h1>{{ product.name }}</h1>
+			<h1>$ {{product.price}}</h1> <br>
+
+			<button class="py-2 px-2 bg-green-200">Add to cart</button>
+			</div>
+			
+		</div>
+
+		
+		
+		<script src="" async defer></script>
+		<script src="https://unpkg.com/vue@3"></script>
+
+		<script>
+			Vue.createApp({
+			  data() {
+				return {
+				  message: 'Hello Vue!',
+				  products: [
+				  {
+					"name": "MACEOO SHIRT | GALILEO SQUARE MICRO ORANGE",
+					"price": 138,
+					"sizes": ["S","M","L","XL", "2XL"],
+					"images": ["https://cdn.shopify.com/s/files/1/0115/5332/products/GalileoSquareMicroOrange_202201010063_1_Main_1800x1800.jpg?v=1647746109", "https://cdn.shopify.com/s/files/1/0115/5332/products/GalileoSquareMicroOrange_202201010063_4_1800x1800.jpg?v=1647746108",
+					"https://cdn.shopify.com/s/files/1/0115/5332/products/GalileoSquareMicroOrange_202201010063_10_1800x1800.jpg?v=1647746109"],
+					"attributes": ["Spring / Summer 2022,", "American Slim Fit", "Italian Fabrics from 100% Cotton", "Imported", "Ship from Las Vegas, USA", "Machine Washable, Dry Cleaned preferred", "Lay Flat to Dry, Don't Tumble Dry"]
+				  } ,
+				  {
+					"name": "MACEOO SHIRT ",
+					"price": 158,
+					"sizes": ["S","M","L","XL", "2XL"],
+					"images": ["https://cdn.shopify.com/s/files/1/0115/5332/products/GalileoSquareMicroOrange_202201010063_1_Main_1800x1800.jpg?v=1647746109", "https://cdn.shopify.com/s/files/1/0115/5332/products/GalileoSquareMicroOrange_202201010063_4_1800x1800.jpg?v=1647746108",
+					"https://cdn.shopify.com/s/files/1/0115/5332/products/GalileoSquareMicroOrange_202201010063_10_1800x1800.jpg?v=1647746109"],
+					"attributes": ["Spring / Summer 2022,", "American Slim Fit", "Italian Fabrics from 100% Cotton", "Imported", "Ship from Las Vegas, USA", "Machine Washable, Dry Cleaned preferred", "Lay Flat to Dry, Don't Tumble Dry"]
+				  }  
+				],
+				}
+			  }
+			}).mount('#app')
+		  </script>
+	</body>
+</html>
